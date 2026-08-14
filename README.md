@@ -9,6 +9,37 @@ static hosts.
 
 ---
 
+## Live site
+
+**https://richelcode.github.io/karis-missions-website/**
+
+Hosted free on GitHub Pages, served straight from the `main` branch of
+<https://github.com/RichelCode/karis-missions-website>. Anyone with the link
+can open it. There is nothing to log in to.
+
+### Publishing a change
+
+```bash
+python3 tools/build.py          # regenerate the pages
+git add -A
+git commit -m "Describe the change"
+git push
+```
+
+GitHub rebuilds the site automatically. It goes live in about a minute.
+
+### Using your own domain
+
+1. Buy the domain, e.g. `karismissions.org`.
+2. In the repo: **Settings, Pages, Custom domain**, enter it and save.
+3. At your domain registrar, point the DNS at GitHub Pages
+   (four A records for the apex, or a CNAME to `richelcode.github.io`).
+4. Change `SITE_URL` at the top of `tools/build.py` to the new address and run
+   `python3 tools/build.py`, so canonical URLs, share cards, `sitemap.xml` and
+   the structured data all follow.
+
+---
+
 ## Preview locally
 
 ```bash
@@ -50,7 +81,7 @@ assets/
   js/site.js           navigation, forms, resource search
   img/                 photography, logos, document previews
   downloads/           the public documents people can download
-Richeal/               original source material (not published as-is)
+Richeal/               original source material, NOT in git (see .gitignore)
 *.html                 GENERATED, do not edit these directly
 ```
 
@@ -168,11 +199,11 @@ is built and validated but not yet wired to a destination.
 Until this is done nothing is silently lost: each form tells the visitor to email us
 instead and offers a pre-filled mail link.
 
-### 2. Set the real domain
+### 2. The address is already set
 
-`SITE_URL` in `tools/build.py` is currently `https://www.karismissions.org`. Change it to
-the real domain, then rebuild, it drives the canonical URLs, social share tags,
-`sitemap.xml`, and structured data.
+`SITE_URL` in `tools/build.py` points at the live GitHub Pages address. If a
+custom domain is added later, change it there and rebuild; see "Using your own
+domain" above.
 
 ### 3. Confirm the details we published
 
