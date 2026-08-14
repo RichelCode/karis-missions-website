@@ -1,0 +1,159 @@
+{
+  "_comment": "Master list for the Resource Center. Add a file to assets/downloads/, add an entry here, then run tools/build.py. File sizes are read from disk at build time and never hand-written.",
+  "groups": [
+    {
+      "id": "tracts",
+      "title": "Gospel Tracts",
+      "intro": "Print-ready evangelism tracts used in street outreach and door-to-door ministry. Download the PDF to print and share, or the Word version if you need to adapt the contact details for your own assembly.",
+      "items": [
+        {
+          "title": "You May Not Feel Lost… But You Need Rescue",
+          "description": "A three-panel tract for people who are comfortable but disconnected from God. Walks through spiritual death, the need for a rescuer, God's rescue plan, and a prayer of surrender.",
+          "tags": [
+            "Evangelism",
+            "Tri-fold"
+          ],
+          "preview": "assets/img/previews/you-may-not-feel-lost.jpg",
+          "files": [
+            {
+              "label": "Download PDF",
+              "path": "assets/downloads/tracts/you-may-not-feel-lost.pdf"
+            },
+            {
+              "label": "Word (editable)",
+              "path": "assets/downloads/tracts/you-may-not-feel-lost.docx"
+            }
+          ]
+        },
+        {
+          "title": "Are You Ready to Meet Your Maker?",
+          "description": "An apologetics-leaning tract addressing the reality of judgment, the evidence of a Creator, and the invitation of the cross. Suited to thoughtful sceptics and open-air conversations.",
+          "tags": [
+            "Evangelism",
+            "Tri-fold"
+          ],
+          "preview": "assets/img/previews/are-you-ready-to-meet-your-maker.jpg",
+          "files": [
+            {
+              "label": "Download PDF",
+              "path": "assets/downloads/tracts/are-you-ready-to-meet-your-maker.pdf"
+            },
+            {
+              "label": "Word (editable)",
+              "path": "assets/downloads/tracts/are-you-ready-to-meet-your-maker.docx"
+            }
+          ]
+        },
+        {
+          "title": "The Call to Truly Believe",
+          "description": "A fuller gospel presentation moving from creation and purpose, through the fall and God's mercy, to the invitation to come to the Saviour. Useful as a follow-up for new believers.",
+          "tags": [
+            "Evangelism",
+            "Follow-up"
+          ],
+          "preview": "assets/img/previews/the-call-to-truly-believe.jpg",
+          "files": [
+            {
+              "label": "Download PDF",
+              "path": "assets/downloads/tracts/the-call-to-truly-believe.pdf"
+            },
+            {
+              "label": "Word (editable)",
+              "path": "assets/downloads/tracts/the-call-to-truly-believe.docx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outreach",
+      "title": "Outreach & Invitation Materials",
+      "intro": "Print artwork used for street evangelism, neighbourhood visitation, and outdoor signage. Send these files straight to a print shop, or use them as templates for your own outreach.",
+      "items": [
+        {
+          "title": "Door Hanger. Sunday Service (Navy)",
+          "description": "Neighbourhood door hanger carrying Sunday service and midweek Bible study details. Print-ready artwork at full bleed.",
+          "tags": [
+            "Door hanger",
+            "Print"
+          ],
+          "preview": "assets/img/previews/door-hanger-sunday-service-navy.jpg",
+          "files": [
+            {
+              "label": "Download artwork",
+              "path": "assets/downloads/outreach/door-hanger-sunday-service-navy.png"
+            }
+          ]
+        },
+        {
+          "title": "Door Hanger. Sunday Service (Green)",
+          "description": "Alternate colourway of the neighbourhood door hanger, for rotating outreach rounds or a second design run.",
+          "tags": [
+            "Door hanger",
+            "Print"
+          ],
+          "preview": "assets/img/previews/door-hanger-sunday-service-green.jpg",
+          "files": [
+            {
+              "label": "Download artwork",
+              "path": "assets/downloads/outreach/door-hanger-sunday-service-green.png"
+            }
+          ]
+        },
+        {
+          "title": "Yard Sign, “Jesus Is Coming Soon!”",
+          "description": "The Believers Call street-evangelism placard artwork, supplied as print-ready PDF for yard signs and hand-held boards.",
+          "tags": [
+            "Signage",
+            "Print"
+          ],
+          "preview": "assets/img/previews/yard-sign-jesus-is-coming-soon.jpg",
+          "files": [
+            {
+              "label": "Download PDF",
+              "path": "assets/downloads/outreach/yard-sign-jesus-is-coming-soon.pdf"
+            }
+          ]
+        },
+        {
+          "title": "Outdoor Banner, 3ft × 5ft",
+          "description": "Large-format banner artwork sized for a standard 3ft by 5ft outdoor print, for use at services, crusades, and community events.",
+          "tags": [
+            "Signage",
+            "Large format"
+          ],
+          "preview": "assets/img/previews/banner-3ft-by-5ft.jpg",
+          "files": [
+            {
+              "label": "Download artwork",
+              "path": "assets/downloads/outreach/banner-3ft-by-5ft.png"
+            }
+          ]
+        },
+        {
+          "title": "Feather Flag Artwork",
+          "description": "Three feather-flag designs for pavement and forecourt use, carrying service times and invitation messaging.",
+          "tags": [
+            "Signage",
+            "Large format"
+          ],
+          "preview": "assets/img/previews/feather-flag-a.jpg",
+          "files": [
+            {
+              "label": "Design A",
+              "path": "assets/downloads/outreach/feather-flag-a.png"
+            },
+            {
+              "label": "Design B",
+              "path": "assets/downloads/outreach/feather-flag-b.png"
+            },
+            {
+              "label": "Design C",
+              "path": "assets/downloads/outreach/feather-flag-c.png"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

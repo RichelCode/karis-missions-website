@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Karis Missions International">
+  <rect width="64" height="64" rx="14" fill="#0f2e4f"/>
+  <!-- light rays from the lantern -->
+  <g fill="#d8b365" opacity=".7">
+    <path d="M23.5 15.5 11 11.5l-1.4 4.3 12.6 4z"/>
+    <path d="M40.5 15.5 53 11.5l1.4 4.3-12.6 4z"/>
+  </g>
+  <!-- lantern room and tower -->
+  <g fill="#c62828">
+    <path d="M32 5.5 35.6 12h-7.2z"/>
+    <rect x="26.6" y="12" width="10.8" height="7" rx="1.4"/>
+    <rect x="24.6" y="19" width="14.8" height="3.2" rx="1.6"/>
+    <path d="M27.4 22.2h9.2l2.6 20.6H24.8z"/>
+  </g>
+  <rect x="30.4" y="30" width="3.2" height="12.8" rx="1.2" fill="#0f2e4f"/>
+  <!-- cupped hands -->
+  <path d="M13 40.5h38a19 19 0 0 1-19 17.5 19 19 0 0 1-19-17.5z" fill="#f4f7fa"/>
+</svg>

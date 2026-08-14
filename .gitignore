@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Build scratch
+tools/_tmp_render*
+tools/__pycache__/
+*.pyc
+
+# Original source material (46MB of print-resolution PDFs, signage artwork and
+# raw photography). The website does not need it: everything the site serves
+# has already been processed into assets/ by tools/prepare_assets.py.
+#
+# It is excluded so the public repo and every deploy stays small. Keep the
+# folder backed up somewhere else. To version it here instead, delete the two
+# lines below and run:  git add Richeal && git commit
+Richeal/

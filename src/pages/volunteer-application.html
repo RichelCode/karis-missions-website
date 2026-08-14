@@ -1,0 +1,155 @@
+<!--meta
+title: Volunteer Application
+crumb: Volunteer Application
+description: Apply to serve with Karis Missions International. Tell us about your faith, calling, gifts, readiness, and the kind of service opportunity you are exploring.
+hero_eyebrow: Begin Your Mission Journey
+hero_title: Volunteer Application
+hero_text: Tell us about your faith, calling, gifts, readiness, and the kind of service opportunity you are exploring.
+-->
+
+<section class="content">
+  <div class="container">
+    <div class="split wide-right top">
+      <div class="prose">
+        <h2 style="margin-top:0">Before you begin</h2>
+        <p>This application is an <strong>expression of interest, not a guarantee of placement</strong>. Approved applicants move through review, an interview, references, preparation, and then a placement offer.</p>
+        <p>It takes about ten minutes. Write plainly. We are not looking for polished answers, we are looking for an honest picture of where you are.</p>
+
+        <h3>What happens after you submit</h3>
+        <ol>
+          <li>We acknowledge your application, usually within a week.</li>
+          <li>If it looks like a fit, we arrange a conversation.</li>
+          <li>We request references, including one from your local church.</li>
+          <li>You complete orientation and safeguarding preparation.</li>
+          <li>We confirm a placement, dates, and a written cost estimate.</li>
+        </ol>
+
+        <div class="callout info">
+          <p><strong>How we handle your information.</strong> What you write here is used only to assess and support your application. We do not sell or share it, and you can ask us to delete it at any time. See our <a href="privacy.html">Privacy Policy</a> and <a href="safeguarding.html">Safeguarding commitments</a>.</p>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h2 style="margin-top:0">Application</h2>
+        <p class="small">Fields marked <span class="req" aria-hidden="true">*</span> are required.</p>
+
+        <form data-form data-subject="Volunteer application" data-success="Thank you. Your application has been received. We will be in touch, usually within a week.">
+          <div class="form-grid">
+            <div class="field">
+              <label for="va-name">Full name <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="va-name" name="full_name" required autocomplete="name">
+              <p class="field-error" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="va-email">Email address <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="va-email" name="email" required autocomplete="email">
+              <p class="field-error" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="va-country">Country of residence</label>
+              <input type="text" id="va-country" name="country" autocomplete="country-name">
+            </div>
+            <div class="field">
+              <label for="va-phone">Phone</label>
+              <input type="tel" id="va-phone" name="phone" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="va-describes">What best describes you?</label>
+              <select id="va-describes" name="describes_you">
+                <option>Church member</option>
+                <option>Seminary or Bible college student</option>
+                <option>Pastor or ministry leader</option>
+                <option>Working professional</option>
+                <option>Retired professional</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="va-duration">Preferred duration</label>
+              <select id="va-duration" name="preferred_duration">
+                <option>1 week</option>
+                <option>2 weeks</option>
+                <option>3 to 4 weeks</option>
+                <option>1 to 3 months</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="va-type">Kind of service you are exploring</label>
+              <select id="va-type" name="service_type">
+                <option>Evangelism and discipleship</option>
+                <option>Student internship</option>
+                <option>Professional service</option>
+                <option>Team leader</option>
+                <option>Open, place me where needed</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="va-when">Earliest you could travel</label>
+              <input type="text" id="va-when" name="earliest_travel" placeholder="e.g. Summer next year">
+            </div>
+
+            <div class="field full">
+              <label for="va-faith">Tell us about your relationship with Jesus Christ. <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="va-faith" name="faith_journey" required></textarea>
+              <p class="field-error" role="alert"></p>
+            </div>
+            <div class="field full">
+              <label for="va-why">Why are you interested in serving with Karis? <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="va-why" name="why_karis" required></textarea>
+              <p class="field-error" role="alert"></p>
+            </div>
+            <div class="field full">
+              <label for="va-skills">What ministry, professional, or practical skills could you contribute?</label>
+              <textarea id="va-skills" name="skills"></textarea>
+            </div>
+
+            <div class="field">
+              <label for="va-church">Are you actively involved in a local church?</label>
+              <select id="va-church" name="local_church">
+                <option>Yes</option>
+                <option>No</option>
+                <option>Looking for one at the moment</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="va-passport">Do you have a valid passport?</label>
+              <select id="va-passport" name="passport">
+                <option>Yes</option>
+                <option>No</option>
+                <option>In process</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="va-ref">Church reference, name and contact</label>
+              <input type="text" id="va-ref" name="church_reference" placeholder="Pastor or leader who knows you well">
+              <p class="hint">We will always ask before contacting anyone.</p>
+            </div>
+
+            <div class="field full">
+              <label class="check" for="va-agree">
+                <input type="checkbox" id="va-agree" name="agrees_to_standards" required>
+                <span>I understand that mission participation may require references, screening, safeguarding training, orientation, health and travel documentation, and agreement to Karis field standards. <span class="req" aria-hidden="true">*</span></span>
+              </label>
+              <p class="field-error" role="alert"></p>
+            </div>
+            <div class="field full">
+              <label class="check" for="va-privacy">
+                <input type="checkbox" id="va-privacy" name="agrees_to_privacy" required>
+                <span>I consent to Karis Missions International storing and using this information to process my application, as described in the <a href="privacy.html">Privacy Policy</a>. <span class="req" aria-hidden="true">*</span></span>
+              </label>
+              <p class="field-error" role="alert"></p>
+            </div>
+          </div>
+
+          <p class="hp"><label for="va-trap">Leave this empty</label><input type="text" id="va-trap" name="_gotcha" tabindex="-1" autocomplete="off"></p>
+
+          <div class="btns">
+            <button class="btn btn-red" type="submit">Submit application</button>
+          </div>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
