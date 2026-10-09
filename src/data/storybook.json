@@ -1,0 +1,136 @@
+{
+  "_comment": "Ama Shines Her Light, a picture book for children. Each page pairs one illustration (drawn by tools/make_storybook_art.py) with a few short paragraphs. Edit the words here and run tools/build.py. Scripture quoted from the World English Bible (public domain).",
+  "title": "Ama Shines Her Light",
+  "subtitle": "A story from Ghana",
+  "byline": "Karis Missions International",
+  "cover": "assets/img/storybook/cover.svg",
+  "cover_alt": "Ama, a young Ghanaian girl, raising her arms on the rocks by the sea as a lighthouse shines at dusk",
+  "pages": [
+    {
+      "image": "beach",
+      "alt": "Ama waving on a sandy beach lined with palm trees and brightly painted fishing canoes, with a lighthouse far away on a hill",
+      "text": [
+        "In a fishing town by the sea in Ghana, where the waves go shhh, shhh and the canoes are painted every colour of the rainbow, there lived a girl named Ama."
+      ]
+    },
+    {
+      "image": "lighthouse",
+      "alt": "Ama and her grandmother on the rocks at sunset, watching the lighthouse shine",
+      "text": [
+        "Every evening, Ama sat on the warm rocks with her grandmother, Nana, and watched the lighthouse on the hill. Blink... blink... blink.",
+        "\"Why does it shine, Nana?\" asked Ama.",
+        "\"So the fishermen can find their way home,\" said Nana. \"When the night is dark, they look for the light.\""
+      ]
+    },
+    {
+      "image": "church",
+      "alt": "A pastor reading from the Bible at the front of a church while Ama and Nana listen from the bench",
+      "text": [
+        "On Sunday, Ama sat next to Nana at church. The pastor opened his Bible and read the words of Jesus: \"You are the light of the world.\"",
+        "Ama looked down at her small hands. \"Me? A light?\" she whispered. \"But I'm just Ama.\""
+      ]
+    },
+    {
+      "image": "bedtime",
+      "alt": "Nana sitting beside Ama's bed at night while Ama prays, with the moon shining through the window",
+      "text": [
+        "That night, Nana tucked her into bed. \"Jesus said, 'I am the light of the world,'\" Nana told her. \"When you follow Him, His light shines in you. Even in little girls. Especially in little girls.\"",
+        "So Ama prayed. \"Jesus, I want to follow You. Please shine in me.\""
+      ],
+      "step": "Know"
+    },
+    {
+      "image": "morning",
+      "alt": "Ama and Nana reading a Bible together in their courtyard as the sun rises",
+      "text": [
+        "Every morning after that, Ama read a Bible story with Nana before school. She learned new songs, and she learned to pray about everything, the big things and the small things.",
+        "Little by little, like the sun coming up over the sea, Ama's light was growing."
+      ],
+      "step": "Grow"
+    },
+    {
+      "image": "market",
+      "alt": "Ama carrying a basket of tomatoes on her head through a busy market as Auntie Efua thanks her",
+      "text": [
+        "At the market, Auntie Efua's basket of tomatoes was very heavy. \"Let me help!\" said Ama, and she carried it on her head all the way home.",
+        "Auntie Efua smiled. \"Medaase, Ama!\" That means thank you."
+      ],
+      "step": "Serve"
+    },
+    {
+      "image": "school",
+      "alt": "Ama walking over to a new boy, Kwame, who is sitting alone under a mango tree at school, holding out her lunch to share",
+      "text": [
+        "At school there was a new boy named Kwame. At lunchtime he sat all by himself under the mango tree.",
+        "Ama sat down beside him and shared her kenkey. \"Akwaaba,\" she said. \"Welcome.\""
+      ]
+    },
+    {
+      "image": "friends",
+      "alt": "Ama and Kwame talking together under the mango tree, with a heart between them",
+      "text": [
+        "\"Why are you kind to me?\" asked Kwame.",
+        "Ama thought for a moment. \"Because Jesus loves me,\" she said. \"And He loves you, too. He's like a lighthouse. He helps us find our way home to God.\""
+      ],
+      "step": "Go"
+    },
+    {
+      "image": "storm",
+      "alt": "A wild storm over the sea at night, with rain, lightning, big waves and a small canoe far out on the water",
+      "text": [
+        "One evening, a big storm blew in from the sea. The wind howled. The rain poured. And all the lights in the town went out!",
+        "Out on the dark water, Kwame's father was still in his canoe."
+      ]
+    },
+    {
+      "image": "praying",
+      "alt": "Ama and Kwame holding hands and praying in the rain while the lighthouse shines on the hill",
+      "text": [
+        "Ama and Kwame held hands and prayed. \"Please, God, bring Papa home safely.\"",
+        "Through the rain, they could just see it on the hill: the lighthouse, still shining. Blink... blink... blink."
+      ]
+    },
+    {
+      "image": "home",
+      "alt": "Fishing canoes safe on the beach under the stars as Kwame runs to hug his father, with Ama and Nana watching",
+      "text": [
+        "The fishermen followed the light, and one by one, the canoes came safely home. Kwame ran to hug his father.",
+        "\"The lighthouse doesn't shine for itself,\" said Ama softly. \"It shines so that others can find their way home.\""
+      ]
+    },
+    {
+      "image": "together",
+      "alt": "Ama, Kwame and his little sister Esi walking hand in hand towards a church on a sunny morning",
+      "text": [
+        "The next Sunday, Kwame came to church with Ama. And the Sunday after that, Kwame brought his little sister, Esi.",
+        "One little light became two. Two became three. And the light kept on spreading."
+      ],
+      "step": "Multiply"
+    },
+    {
+      "image": "ending",
+      "alt": "Ama, Kwame, Esi and Nana sitting together on the rocks at dusk, watching the lighthouse shine under the first stars",
+      "text": [
+        "Now, every evening, three children sit on the warm rocks with Nana and watch the lighthouse shine.",
+        "And Ama knows that she can shine, too.",
+        "How about you, little light? Who will you shine for?"
+      ]
+    }
+  ],
+  "verses": [
+    {"ref": "Matthew 5:14", "text": "You are the light of the world."},
+    {"ref": "John 8:12", "text": "I am the light of the world. He who follows me will not walk in the darkness, but will have the light of life."}
+  ],
+  "talk": [
+    "Why did the fishermen need the lighthouse?",
+    "What did Ama do to let her light shine? Can you find all the ways?",
+    "How did Kwame and Esi come to know about Jesus?",
+    "Who is someone you could shine your light for this week?"
+  ],
+  "words": [
+    {"word": "Nana", "meaning": "A grandparent, or an older person who is greatly respected."},
+    {"word": "Akwaaba", "meaning": "\"Welcome\" in Twi, a language spoken by many people in Ghana."},
+    {"word": "Medaase", "meaning": "\"Thank you\" in Twi."},
+    {"word": "Kenkey", "meaning": "A favourite Ghanaian food made from corn dough, cooked wrapped in leaves."}
+  ]
+}

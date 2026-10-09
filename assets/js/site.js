@@ -6,7 +6,7 @@
    ----------------------------------
    1. Create a free account at https://formspree.io and add a new form.
    2. Formspree gives you an endpoint like https://formspree.io/f/abcdwxyz
-   3. Paste the ID (the part after /f/) into FORM_ENDPOINT below.
+   3. Put it in FORM_ENDPOINT at the top of tools/build.py and rebuild.
 
    Until that is done, every form on the site stays fully usable: instead of
    silently discarding the message, it tells the visitor to email us directly
@@ -16,7 +16,8 @@
 (function () {
   'use strict';
 
-  var FORM_ENDPOINT = '';                      // e.g. 'https://formspree.io/f/abcdwxyz'
+  // Set in tools/build.py and stamped onto <body> at build time.
+  var FORM_ENDPOINT = document.body.dataset.formEndpoint || '';
   var FALLBACK_EMAIL = 'tackiausa@gmail.com';
 
   var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -29,7 +30,7 @@
   var scrim = document.querySelector('.nav-scrim');
 
   function isMobileNav() {
-    return window.matchMedia('(max-width: 980px)').matches;
+    return window.matchMedia('(max-width: 1080px)').matches;   // matches the drawer in styles.css
   }
 
   function setDrawer(open) {
@@ -229,7 +230,7 @@
       if (!FORM_ENDPOINT) {
         setStatus(status, 'err',
           'This form is not connected yet. Please email us directly at ' +
-          '<a href="mailto:' + FALLBACK_EMAIL + '">' + FALLBACK_EMAIL + '</a> — ' +
+          '<a href="mailto:' + FALLBACK_EMAIL + '">' + FALLBACK_EMAIL + '</a>, or ' +
           '<a href="' + mailtoFallback(form) + '">open a pre-filled email</a>.');
         return;
       }
@@ -251,7 +252,7 @@
         })
         .catch(function () {
           setStatus(status, 'err',
-            'Sorry — we could not send that. Please try again, or email us at ' +
+            'Sorry, we could not send that. Please try again, or email us at ' +
             '<a href="mailto:' + FALLBACK_EMAIL + '">' + FALLBACK_EMAIL + '</a>.');
         })
         .finally(function () {
@@ -343,5 +344,167 @@
         });
       });
     });
+  }
+
+  /* -------------------------------------------------------- Little Lights */
+
+  // Stars a child has collected live only in this browser. Nothing is sent
+  // anywhere, and every read and write survives storage being unavailable.
+  var KIDS_KEY = 'karis-little-lights';
+
+  function kidsDone() {
+    try { return JSON.parse(localStorage.getItem(KIDS_KEY)) || []; } catch (e) { return []; }
+  }
+  function kidsSave(list) {
+    try { localStorage.setItem(KIDS_KEY, JSON.stringify(list)); } catch (e) { /* private mode */ }
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('[data-kids-done]'), function (btn) {
+    var slug = btn.dataset.kidsDone;
+    var label = btn.querySelector('.kids-done-label');
+    var note = document.querySelector('.kids-done-note');
+
+    function show(done) {
+      btn.setAttribute('aria-pressed', String(done));
+      if (label) label.textContent = done ? 'Star collected!' : 'I did it!';
+    }
+    show(kidsDone().indexOf(slug) !== -1);
+
+    btn.addEventListener('click', function () {
+      var list = kidsDone();
+      var i = list.indexOf(slug);
+      if (i === -1) list.push(slug); else list.splice(i, 1);
+      kidsSave(list);
+      show(i === -1);
+      if (note) note.textContent = i === -1 ? 'Well done! You shone your light today.' : '';
+    });
+  });
+
+  var kidsCards = document.querySelectorAll('[data-kids-card]');
+  if (kidsCards.length) {
+    var done = kidsDone();
+    var count = 0;
+    Array.prototype.forEach.call(kidsCards, function (card) {
+      var isDone = done.indexOf(card.dataset.kidsCard) !== -1;
+      card.classList.toggle('is-done', isDone);
+      if (isDone) count++;
+    });
+    var progress = document.querySelector('[data-kids-progress]');
+    if (progress && count) {
+      progress.querySelector('[data-kids-progress-text]').textContent = count === kidsCards.length
+        ? 'You collected all ' + count + ' stars. Amazing!'
+        : 'You have ' + count + ' of ' + kidsCards.length + ' stars. Keep going!';
+      progress.hidden = false;
+    }
+  }
+
+  // Read it to me: the browser's own speech, so no audio is fetched from anywhere.
+  var readBtn = document.querySelector('[data-read-aloud]');
+  if (readBtn) {
+    if (!('speechSynthesis' in window)) {
+      readBtn.hidden = true;
+    } else {
+      var readLabel = readBtn.querySelector('span');
+      var setReading = function (on) {
+        readBtn.setAttribute('aria-pressed', String(on));
+        readLabel.textContent = on ? 'Stop reading' : 'Read it to me';
+      };
+      readBtn.addEventListener('click', function () {
+        if (speechSynthesis.speaking) {
+          speechSynthesis.cancel();
+          setReading(false);
+          return;
+        }
+        var text = Array.prototype.map.call(document.querySelectorAll('[data-read]'), function (el) {
+          return el.innerText;
+        }).join('. \n');
+        var talk = new SpeechSynthesisUtterance(text);
+        talk.rate = 0.9;
+        talk.onend = talk.onerror = function () { setReading(false); };
+        speechSynthesis.speak(talk);
+        setReading(true);
+      });
+      window.addEventListener('pagehide', function () { speechSynthesis.cancel(); });
+    }
+  }
+
+  /* -------------------------------------------------------- picture book */
+
+  var book = document.querySelector('[data-book]');
+  if (book) {
+    var bookPages = Array.prototype.slice.call(book.querySelectorAll('[data-page]'));
+    var bookControls = book.querySelector('.book-controls');
+    var prevBtn = book.querySelector('[data-book-prev]');
+    var nextBtn = book.querySelector('[data-book-next]');
+    var countEl = book.querySelector('[data-book-count]');
+    var bookRead = book.querySelector('[data-book-read]');
+    var story = bookPages.length - 2;           // less the cover and the back page
+    var current = 0;
+
+    var stopReading = function () {
+      if ('speechSynthesis' in window) speechSynthesis.cancel();
+      if (bookRead) {
+        bookRead.setAttribute('aria-pressed', 'false');
+        bookRead.querySelector('span').textContent = 'Read this page';
+      }
+    };
+
+    var showPage = function (n, focus) {
+      current = Math.max(0, Math.min(bookPages.length - 1, n));
+      bookPages.forEach(function (p, k) { p.hidden = k !== current; });
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current === bookPages.length - 1;
+      countEl.textContent = current === 0 ? 'Cover'
+        : current === bookPages.length - 1 ? 'The end'
+        : 'Page ' + current + ' of ' + story;
+      stopReading();
+      if (focus) book.scrollIntoView({ block: 'nearest', behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+    };
+
+    book.classList.add('is-paged');
+    bookControls.hidden = false;
+    showPage(0);
+
+    prevBtn.addEventListener('click', function () { showPage(current - 1, true); });
+    nextBtn.addEventListener('click', function () { showPage(current + 1, true); });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.target.closest('input, textarea, select')) return;
+      if (e.key === 'ArrowRight') showPage(current + 1);
+      if (e.key === 'ArrowLeft') showPage(current - 1);
+    });
+
+    var touchX = null;
+    book.addEventListener('touchstart', function (e) { touchX = e.touches[0].clientX; }, { passive: true });
+    book.addEventListener('touchend', function (e) {
+      if (touchX === null) return;
+      var dx = e.changedTouches[0].clientX - touchX;
+      if (Math.abs(dx) > 50) showPage(current + (dx < 0 ? 1 : -1));
+      touchX = null;
+    });
+
+    if (bookRead) {
+      if (!('speechSynthesis' in window)) {
+        bookRead.hidden = true;
+      } else {
+        bookRead.addEventListener('click', function () {
+          if (speechSynthesis.speaking) { stopReading(); return; }
+          var page = bookPages[current];
+          var text = (page.querySelector('[data-book-text], .book-title, .book-back-grid') || page).innerText;
+          var talk = new SpeechSynthesisUtterance(text);
+          talk.rate = 0.9;
+          talk.onend = talk.onerror = stopReading;
+          speechSynthesis.speak(talk);
+          bookRead.setAttribute('aria-pressed', 'true');
+          bookRead.querySelector('span').textContent = 'Stop reading';
+        });
+      }
+    }
+
+    // Printing shows the whole book, whichever page is open.
+    window.addEventListener('beforeprint', function () {
+      bookPages.forEach(function (p) { p.hidden = false; });
+    });
+    window.addEventListener('afterprint', function () { showPage(current); });
   }
 })();

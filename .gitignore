@@ -14,3 +14,6 @@ tools/__pycache__/
 # folder backed up somewhere else. To version it here instead, delete the two
 # lines below and run:  git add Richeal && git commit
 Richeal/
+
+# Local layout checks (served from the site root, never published)
+_qa/

@@ -1,0 +1,68 @@
+{
+  "_comment": "The Events page. 'weekly' is the regular rhythm of the assemblies. 'upcoming' holds one-off events: outreaches, conferences, Ghana trip dates. Dates are YYYY-MM-DD and times 24-hour HH:MM in the event's own time zone. Past events drop off automatically at the next build. Example upcoming entry: {\"title\": \"Community outreach\", \"date\": \"2026-11-14\", \"start\": \"10:00\", \"end\": \"13:00\", \"tz\": \"America/Denver\", \"place\": \"Karis International Assembly\", \"address\": \"5905 Flintridge Drive, Colorado Springs, CO 80918\", \"description\": \"Door-to-door with tracts, then lunch together.\", \"link\": \"resources.html#tracts\"}",
+  "weekly": [
+    {
+      "id": "karis-sunday",
+      "assembly": "Karis International Assembly",
+      "title": "Sunday Service",
+      "day": "SU",
+      "start": "10:00",
+      "end": "12:00",
+      "tz": "America/Denver",
+      "address": "5905 Flintridge Drive, Colorado Springs, CO 80918"
+    },
+    {
+      "id": "karis-thursday",
+      "assembly": "Karis International Assembly",
+      "title": "Bible Studies & Prayers",
+      "day": "TH",
+      "start": "18:30",
+      "end": "20:00",
+      "tz": "America/Denver",
+      "address": "5926 Del Paz Drive, Colorado Springs, CO 80918",
+      "note": "Stay and eat together afterwards."
+    },
+    {
+      "id": "delaware-international",
+      "assembly": "Delaware Central Assembly",
+      "title": "International Service",
+      "day": "SU",
+      "start": "09:00",
+      "end": "10:15",
+      "tz": "America/New_York",
+      "address": "2042 Sunset Lake Road, Newark, DE 19702"
+    },
+    {
+      "id": "delaware-second",
+      "assembly": "Delaware Central Assembly",
+      "title": "Second Service",
+      "day": "SU",
+      "start": "10:30",
+      "end": "13:00",
+      "tz": "America/New_York",
+      "address": "2042 Sunset Lake Road, Newark, DE 19702"
+    },
+    {
+      "id": "delaware-bible-study",
+      "assembly": "Delaware Central Assembly",
+      "title": "Bible Studies",
+      "day": "WE",
+      "start": "19:00",
+      "end": "20:00",
+      "tz": "America/New_York",
+      "address": "Online",
+      "note": "Online. Ask the assembly for the link."
+    },
+    {
+      "id": "delaware-jericho-hour",
+      "assembly": "Delaware Central Assembly",
+      "title": "Jericho Hour",
+      "day": "FR",
+      "start": "19:00",
+      "end": "21:00",
+      "tz": "America/New_York",
+      "address": "2042 Sunset Lake Road, Newark, DE 19702"
+    }
+  ],
+  "upcoming": []
+}

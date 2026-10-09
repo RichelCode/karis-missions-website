@@ -154,6 +154,43 @@
           ]
         }
       ]
+    },
+    {
+      "id": "children",
+      "title": "For Children",
+      "intro": "Little Lights material for families, Sunday schools and holiday clubs. Free to print and share; please do not sell it.",
+      "items": [
+        {
+          "title": "Ama Shines Her Light",
+          "description": "An illustrated picture book set in a Ghanaian fishing town: a lighthouse, a storm, and a girl who learns that she can shine. Fourteen landscape pages with Bible verses and questions at the back.",
+          "tags": [
+            "Picture book",
+            "Ages 4 to 10"
+          ],
+          "preview": "assets/img/storybook/cover.svg",
+          "files": [
+            {
+              "label": "Download PDF",
+              "path": "assets/downloads/kids/ama-shines-her-light.pdf"
+            }
+          ]
+        },
+        {
+          "title": "Little Lights Colouring Book",
+          "description": "Every Little Lights picture as a page to colour, each titled with its story and memory verse. Print the whole book, or just the page for this week's lesson.",
+          "tags": [
+            "Colouring",
+            "Ages 3 to 8"
+          ],
+          "preview": "assets/img/kids/colouring/know.png",
+          "files": [
+            {
+              "label": "Download PDF",
+              "path": "assets/downloads/kids/little-lights-colouring-book.pdf"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Karis Missions International//Events//EN
+BEGIN:VEVENT
+UID:karis-thursday@karismissions
+DTSTAMP:20260101T000000Z
+DTSTART;TZID=America/Denver:20260101T183000
+DTEND;TZID=America/Denver:20260101T200000
+SUMMARY:Bible Studies & Prayers: Karis International Assembly
+LOCATION:5926 Del Paz Drive\, Colorado Springs\, CO 80918
+DESCRIPTION:Stay and eat together afterwards.
+RRULE:FREQ=WEEKLY;BYDAY=TH
+END:VEVENT
+END:VCALENDAR

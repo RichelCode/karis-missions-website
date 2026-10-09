@@ -1,0 +1,348 @@
+{
+  "_comment": "Little Lights: devotions for children, grouped into series. Scripture is quoted from the World English Bible (public domain). Each devotion becomes its own page; edit here, then run tools/build.py. Illustrations come from tools/make_kids_art.py.",
+  "series": [
+    {
+      "id": "five-steps",
+      "title": "Five Steps with Jesus",
+      "season": "All year",
+      "intro": "Five Bible stories, one for each step of the Karis Framework: Know, Grow, Serve, Go, and Multiply.",
+      "devotions": [
+        {
+          "slug": "kids-know",
+          "step": "Know",
+          "title": "Jesus knows your name",
+          "passage": "Luke 19:1-10",
+          "image": "assets/img/kids/know.svg",
+          "image_alt": "A short man waving from the branches of a big tree while Jesus calls up to him",
+          "colour": "sun",
+          "story": [
+            "Zacchaeus lived in a busy town called Jericho. He was a tax collector, and he had taken more money from people than he should have. Not many people liked him. He was also short. So short that in a crowd, all he could see was elbows and backs!",
+            "One day everyone was rushing to the road. Jesus was coming! Zacchaeus wanted to see Him so much that he ran ahead and climbed up a sycamore tree. There he sat among the leaves, waiting.",
+            "When Jesus came to that tree, He stopped. He looked right up and said, \"Zacchaeus, hurry and come down. Today I must stay at your house.\"",
+            "Jesus knew his name! Zacchaeus climbed down as fast as he could, full of joy. Being with Jesus changed him. He gave half of everything he had to the poor, and paid back the people he had cheated, four times over.",
+            "Jesus did not wait for Zacchaeus to be good first. Jesus came looking for him. And Jesus came looking for you, too."
+          ],
+          "big_idea": "Jesus knows my name, and He came looking for me.",
+          "verse": {
+            "ref": "Luke 19:10",
+            "text": "For the Son of Man came to seek and to save that which was lost."
+          },
+          "talk": [
+            "Why do you think Zacchaeus climbed the tree?",
+            "How do you think he felt when Jesus called his name?",
+            "Is there something you would like to tell Jesus today?"
+          ],
+          "try": "Write your name on a paper leaf (a grown-up can help). Stick it somewhere you will see it every day this week. Each time you see it, say: \"Jesus knows my name!\"",
+          "prayer": "Dear Jesus, thank You that You know my name. Thank You for coming to find me. Help me to know You more and more. Amen.",
+          "grown_ups": "Children often believe they have to be good before God will want them. Zacchaeus shows the opposite order: Jesus comes first, and the change follows. Let that be the point, rather than \"be nice, like Zacchaeus became.\""
+        },
+        {
+          "slug": "kids-grow",
+          "step": "Grow",
+          "title": "Growing up with God",
+          "passage": "Luke 2:41-52",
+          "image": "assets/img/kids/grow.svg",
+          "image_alt": "A girl with a watering can beside three pots: a tiny sprout, a bigger plant and a tall flower",
+          "colour": "leaf",
+          "story": [
+            "When Jesus was twelve years old, His family walked a long way to the city of Jerusalem for a big feast, together with lots of friends and relatives.",
+            "When the feast was over, everyone set off for home. But Jesus stayed behind, and Mary and Joseph did not know! They thought He was somewhere in the big group. After a whole day of walking, they realised He was missing.",
+            "They hurried back and searched everywhere. After three days, they found Him in the temple, sitting with the teachers, listening to them and asking them questions. Everyone was amazed at how much He understood.",
+            "Jesus went home with Mary and Joseph and obeyed them. And He kept on growing: taller and stronger on the outside, and wiser and closer to God on the inside.",
+            "You are growing, too. You can tell when your shoes get too small! But God also helps you grow on the inside, every time you listen to His Word, talk to Him, and ask your questions."
+          ],
+          "big_idea": "God helps me grow on the inside, not just the outside.",
+          "verse": {
+            "ref": "Luke 2:52",
+            "text": "And Jesus increased in wisdom and stature, and in favor with God and men."
+          },
+          "talk": [
+            "What was Jesus doing in the temple?",
+            "What is one question you would like to ask about God?",
+            "A plant needs sun and water to grow. What helps you grow closer to God?"
+          ],
+          "try": "Plant a seed in a cup of soil (beans grow fast!) and give it a little water each day. As you watch it grow, remember that God is growing you, too.",
+          "prayer": "Dear God, thank You for helping me grow. Help me to love Your Word, to talk to You every day, and to keep asking good questions. Amen.",
+          "grown_ups": "Jesus grew by listening and asking questions. Welcome your child's questions about God, including the ones you cannot answer straight away. \"Let's find out together\" is a good answer."
+        },
+        {
+          "slug": "kids-serve",
+          "step": "Serve",
+          "title": "A small lunch in big hands",
+          "passage": "John 6:1-14",
+          "image": "assets/img/kids/serve.svg",
+          "image_alt": "A boy holding up a basket with five loaves and two fish in front of a big crowd on a hillside",
+          "colour": "sky",
+          "story": [
+            "A huge crowd had followed Jesus up a hillside. More than five thousand people! They had been listening to Him for a long time, and now everyone was hungry. But there were no shops anywhere nearby.",
+            "Jesus asked His friend Philip, \"Where can we buy bread for all these people?\" Philip said that even lots and lots of money would not be enough.",
+            "Then Andrew found a boy with a small lunch: five little barley loaves and two fish. \"But what are these among so many?\" Andrew asked.",
+            "The boy gave his lunch to Jesus. Jesus thanked God for it and began to share it out. And everyone ate! They ate until they were full, and there were twelve baskets of food left over.",
+            "The boy only had a little. But when he gave it to Jesus, Jesus did something amazing with it. Whatever you have, even if it seems small, Jesus can use it to help others."
+          ],
+          "big_idea": "When I give what I have to Jesus, He can use it to help others.",
+          "verse": {
+            "ref": "Galatians 5:13",
+            "text": "Through love be servants to one another."
+          },
+          "talk": [
+            "What did the boy have, and what did he do with it?",
+            "What are some things you have, or can do, that you could share?",
+            "Who is someone you could help this week?"
+          ],
+          "try": "Choose one secret way to serve someone at home this week. Set the table, tidy up a mess you did not make, or make someone a card. Do not tell anyone, and see if they notice!",
+          "prayer": "Dear Jesus, I do not have very much, but I give You what I have. Please use my hands and my heart to help others. Amen.",
+          "grown_ups": "For a child, serving is small and concrete. Look for a job that costs them a little and genuinely helps someone, and when they do it, thank them specifically."
+        },
+        {
+          "slug": "kids-go",
+          "step": "Go",
+          "title": "The girl who spoke up",
+          "passage": "2 Kings 5:1-15",
+          "image": "assets/img/kids/go.svg",
+          "image_alt": "A young girl pointing and telling a lady in a big house that God can help",
+          "colour": "coral",
+          "story": [
+            "Long ago, a young girl from Israel was taken far away from her home to a country called Aram. There she had to work as a servant in the house of a great army captain named Naaman.",
+            "Naaman was important and brave, but he had a terrible skin sickness called leprosy, and no one could make him better.",
+            "The girl could have stayed quiet. But she knew that God was real and powerful. So she said to Naaman's wife, \"I wish my master would go to the prophet in Samaria! He would heal him.\"",
+            "Naaman listened to her. He travelled to see Elisha, God's prophet, and did what God said: he washed seven times in the River Jordan. His skin became healthy and new, like a little child's! Naaman said, \"Now I know that there is no God in all the earth, but in Israel.\"",
+            "One brave girl, far from home, told someone about God, and a whole life was changed. Wherever you go, at school, on your street, or all the way across the world, you can tell people about God, too."
+          ],
+          "big_idea": "Wherever I go, I can tell people about God.",
+          "verse": {
+            "ref": "Mark 16:15",
+            "text": "Go into all the world, and preach the Good News to the whole creation."
+          },
+          "talk": [
+            "Why do you think the girl spoke up, even though she was far from home?",
+            "Who is someone you know who does not know about Jesus yet?",
+            "Where in the world would you like to tell people about Jesus?"
+          ],
+          "try": "Find Ghana on a map or a globe, and then find where you live. Pray for the children in both places. Then ask God who He would like you to tell about Him.",
+          "prayer": "Dear God, make me brave like the girl in Naaman's house. Show me who needs to hear about You, and help me to speak up. Amen.",
+          "grown_ups": "This girl had been taken from her family, and Scripture does not hide that. You can tell it gently without dwelling on it. Her courage is the point: God was with her even there."
+        },
+        {
+          "slug": "kids-multiply",
+          "step": "Multiply",
+          "title": "Andrew tells his brother",
+          "passage": "John 1:35-42",
+          "image": "assets/img/kids/multiply.svg",
+          "image_alt": "Andrew taking his brother Simon by the hand to bring him to Jesus, beside a lake with a fishing boat",
+          "colour": "grape",
+          "story": [
+            "Andrew was a fisherman. One day he heard John the Baptist point to Jesus and say, \"Look, the Lamb of God!\" So Andrew followed Jesus, and spent the whole day with Him.",
+            "By the end of that day, Andrew knew that Jesus was the One God had promised to send. That news was far too good to keep to himself!",
+            "The very first thing Andrew did was find his brother, Simon. \"We have found the Messiah!\" he said. And he brought Simon to Jesus.",
+            "Jesus gave Simon a new name: Peter. Peter grew up to tell thousands and thousands of people about Jesus. And it all started because his brother told him.",
+            "It is like one candle lighting another. Your light does not get smaller when you share it. The world just gets brighter, as more and more people come to know Jesus."
+          ],
+          "big_idea": "When I tell someone about Jesus, the light spreads.",
+          "verse": {
+            "ref": "Matthew 4:19",
+            "text": "Come after me, and I will make you fishers for men."
+          },
+          "talk": [
+            "Who was the first person Andrew told about Jesus?",
+            "Who first told you about Jesus?",
+            "Who is one person you could tell about Jesus, or invite to church?"
+          ],
+          "try": "With a grown-up, light one candle and use it to light another. Did the first flame get any smaller? Then draw a picture for a friend and give it to them with an invitation to church or kids' club.",
+          "prayer": "Dear Jesus, thank You for the people who told me about You. Help me to tell someone else, so that Your light keeps on spreading. Amen.",
+          "grown_ups": "This is the last step of the Karis Framework: disciples who make disciples. Help your child name one real person to pray for and, if it fits, to invite. Keep it light, with no pressure and no script."
+        }
+      ]
+    },
+    {
+      "id": "christmas",
+      "title": "The Light Comes Down",
+      "season": "Christmas",
+      "intro": "Three stories for Advent and Christmas: the promise, the birth of Jesus, and the shepherds who could not keep the good news to themselves.",
+      "devotions": [
+        {
+          "slug": "kids-christmas-promise",
+          "step": "Christmas",
+          "title": "The promise of a great light",
+          "passage": "Isaiah 9:2-7",
+          "image": "assets/img/kids/promise.svg",
+          "image_alt": "A man with a scroll on a hill at night, pointing up at one big bright star above a sleeping village",
+          "colour": "grape",
+          "story": [
+            "Long, long ago, God's people were going through a sad and dark time. Many of them had stopped listening to God, and they felt lost, like someone trying to find the way home on a night with no moon.",
+            "But God had not forgotten them. He gave a message to His prophet Isaiah: \"The people who walked in darkness have seen a great light.\"",
+            "Isaiah told them that one day a very special baby would be born. His names would be Wonderful, Counselor, Mighty God, Everlasting Father, and Prince of Peace.",
+            "God's people waited. And waited. Hundreds and hundreds of years went by! Every time they read Isaiah's words, they wondered: when will the light come?",
+            "God always keeps His promises, even when we have to wait. At Christmas, we remember the night the promised Light finally came."
+          ],
+          "big_idea": "God always keeps His promises.",
+          "verse": {
+            "ref": "Isaiah 9:2",
+            "text": "The people who walked in darkness have seen a great light. Those who lived in the land of the shadow of death, on them the light has shined."
+          },
+          "talk": [
+            "What is it like to wait for something special?",
+            "What did God promise through Isaiah?",
+            "Can you think of another promise God has made to you?"
+          ],
+          "try": "Make a paper chain with one link for each day until Christmas. Every morning, tear off a link and say: \"God keeps His promises!\"",
+          "prayer": "Dear God, thank You that You always keep Your promises. Thank You for sending Jesus, the Light of the world. Amen.",
+          "grown_ups": "Waiting is hard for children, which makes Advent a good teacher. Isaiah's promise came centuries before Jesus was born. Let your child feel how long God's people waited, and how faithfully He kept His word."
+        },
+        {
+          "slug": "kids-christmas-born",
+          "step": "Christmas",
+          "title": "A Saviour is born",
+          "passage": "Luke 2:1-7",
+          "image": "assets/img/kids/born.svg",
+          "image_alt": "Mary and Joseph beside baby Jesus lying in a manger, with a donkey and a cow, under a bright star",
+          "colour": "sun",
+          "story": [
+            "Mary and Joseph had to travel all the way to a small town called Bethlehem. It was a long journey, and Mary was going to have a baby very soon.",
+            "When they arrived, the town was full of visitors, and there was no room for them at the inn. So they stayed in the place where the animals were kept.",
+            "And there, that night, baby Jesus was born. Mary wrapped Him up snugly and laid Him in a manger, the box the animals ate their food from.",
+            "The King of the whole world was born in a simple place, among the cows and donkeys. He did not come with crowns and palaces. He came small, so that anyone could come close to Him.",
+            "That baby was God's promise come true: a Saviour, sent to rescue us and bring us back to God."
+          ],
+          "big_idea": "Jesus came for everyone, and that means me.",
+          "verse": {
+            "ref": "Luke 2:11",
+            "text": "For there is born to you today, in David’s city, a Savior, who is Christ the Lord."
+          },
+          "talk": [
+            "Where was baby Jesus laid after He was born?",
+            "Why do you think God's Son was born in such a simple place?",
+            "What gift could you give to Jesus this Christmas?"
+          ],
+          "try": "Make a little manger from a small box. Each time you do something kind this week, add a strip of yellow paper \"straw\" to make the bed soft for baby Jesus.",
+          "prayer": "Dear Jesus, thank You for coming to earth as a little baby, for me. Help me to make room for You in my heart. Amen.",
+          "grown_ups": "The point of the stable is not poverty for its own sake but nearness. Jesus came low, so that no one would be too small or too ordinary to come to Him."
+        },
+        {
+          "slug": "kids-christmas-shepherds",
+          "step": "Christmas",
+          "title": "The shepherds tell everyone",
+          "passage": "Luke 2:8-20",
+          "image": "assets/img/kids/shepherds.svg",
+          "image_alt": "Shepherds and their sheep on a hillside at night, looking up in wonder at a shining angel",
+          "colour": "sky",
+          "story": [
+            "Out in the fields near Bethlehem, some shepherds were looking after their sheep in the dark. It was a quiet, ordinary night.",
+            "Suddenly an angel appeared, and the glory of the Lord shone all around them! The shepherds were terrified.",
+            "But the angel said, \"Don't be afraid! I bring you good news of great joy for all the people. Today a Saviour has been born!\" Then the whole sky filled with angels praising God.",
+            "The shepherds hurried to Bethlehem and found baby Jesus, just as the angel had said. They were so happy that they told everyone they met about Him!",
+            "The shepherds were not rich or famous. But God chose them to be the first to hear the good news, and they could not keep it to themselves. You can share the good news of Christmas, too."
+          ],
+          "big_idea": "Good news is for sharing!",
+          "verse": {
+            "ref": "Luke 2:10",
+            "text": "Don’t be afraid, for behold, I bring you good news of great joy which will be to all the people."
+          },
+          "talk": [
+            "How did the shepherds feel when they saw the angel? How did they feel at the end?",
+            "Why do you think God told shepherds first?",
+            "Who could you tell about Jesus this Christmas?"
+          ],
+          "try": "Make Christmas cards for neighbours or friends. Inside, write or draw the good news: Jesus is born! Deliver them together with a grown-up.",
+          "prayer": "Dear God, thank You for the good news of Jesus. Give me joy like the shepherds, and help me to share it with someone this Christmas. Amen.",
+          "grown_ups": "Christmas is the easiest time of year for a child to talk about Jesus, because the whole world is already singing about Him. Help them take one simple step of telling."
+        }
+      ]
+    },
+    {
+      "id": "easter",
+      "title": "Jesus Is Alive",
+      "season": "Easter",
+      "intro": "Three stories for Holy Week and Easter: the King on a donkey, the greatest love, and the empty tomb.",
+      "devotions": [
+        {
+          "slug": "kids-easter-hosanna",
+          "step": "Easter",
+          "title": "Hosanna!",
+          "passage": "Matthew 21:1-16",
+          "image": "assets/img/kids/hosanna.svg",
+          "image_alt": "Jesus riding a donkey along a road while children wave palm branches and cheer",
+          "colour": "leaf",
+          "story": [
+            "Jesus and His friends were coming to the big city of Jerusalem. Jesus sent two of His friends to fetch a young donkey, and He rode it into the city.",
+            "When the people saw Him coming, they got very excited! They spread their coats on the road and waved branches from the palm trees.",
+            "Everyone shouted, \"Hosanna! Blessed is He who comes in the name of the Lord!\" Hosanna means \"Save us!\" It was a shout of praise for a King.",
+            "But Jesus was a different kind of king. He did not ride a big war horse. He came gently, on a donkey, because He came to bring peace.",
+            "Even the children joined in, shouting praise to Him in the temple. You can praise King Jesus, too, with your voice, your hands, and your whole heart!"
+          ],
+          "big_idea": "Jesus is my King, and I can praise Him!",
+          "verse": {
+            "ref": "Matthew 21:9",
+            "text": "Hosanna to the son of David! Blessed is he who comes in the name of the Lord! Hosanna in the highest!"
+          },
+          "talk": [
+            "What did the people wave when Jesus came?",
+            "Why did Jesus ride a donkey and not a big horse?",
+            "What is your favourite way to praise God?"
+          ],
+          "try": "Draw and cut out big paper palm leaves. Put on a favourite praise song and march around the room waving them and shouting \"Hosanna!\"",
+          "prayer": "Dear Jesus, You are my King! I praise You with my whole heart. Hosanna! Amen.",
+          "grown_ups": "Hosanna began as a plea, \"save us\", and became a cry of praise. Palm Sunday is a joyful story, but it leads to the cross. This series moves gently through both and ends with the empty tomb."
+        },
+        {
+          "slug": "kids-easter-cross",
+          "step": "Easter",
+          "title": "The greatest love",
+          "passage": "Luke 23:26-49",
+          "image": "assets/img/kids/cross.svg",
+          "image_alt": "A wooden cross on a quiet green hill under a soft evening sky, with a red heart in the sky above",
+          "colour": "coral",
+          "story": [
+            "Not everyone was happy that people loved Jesus. Some leaders were jealous and angry, and they made a plan to have Him killed.",
+            "Jesus knew what was going to happen. He could have run away, but He did not. He loved us too much.",
+            "Jesus was put on a wooden cross, and He died. The sky went dark in the middle of the day. His friends were very, very sad.",
+            "But this was not a mistake. Jesus was taking the punishment for all the wrong things we have done, so that we can be forgiven and be friends with God forever.",
+            "That is the greatest love there has ever been. And the story is not over yet..."
+          ],
+          "big_idea": "Jesus loves me so much that He gave His life for me.",
+          "verse": {
+            "ref": "John 3:16",
+            "text": "For God so loved the world, that he gave his one and only Son, that whoever believes in him should not perish, but have eternal life."
+          },
+          "talk": [
+            "Why did Jesus not run away?",
+            "What does it mean to be forgiven?",
+            "How does it feel to know that Jesus loves you this much?"
+          ],
+          "try": "Make a simple cross from two sticks or lollipop sticks tied with string. Put it somewhere you will see it, to remember how much Jesus loves you.",
+          "prayer": "Dear Jesus, thank You for loving me so much that You died for me. Please forgive me for the wrong things I have done. Thank You that I can be Your friend forever. Amen.",
+          "grown_ups": "Children can take in the truth of the cross when it is told calmly and without graphic detail. Keep the focus on Jesus' love and His choice, and end the conversation with the promise that Sunday is coming."
+        },
+        {
+          "slug": "kids-easter-alive",
+          "step": "Easter",
+          "title": "He is alive!",
+          "passage": "Matthew 28:1-10",
+          "image": "assets/img/kids/alive.svg",
+          "image_alt": "An empty tomb with its big round stone rolled away at sunrise, flowers blooming, and two women running with joy",
+          "colour": "sun",
+          "story": [
+            "Early on Sunday morning, while it was still nearly dark, some women who loved Jesus walked sadly to the tomb where His body had been laid.",
+            "When they got there, the ground shook, and they saw that the huge stone in front of the tomb had been rolled away! An angel was sitting on it, shining as bright as lightning.",
+            "\"Don't be afraid,\" said the angel. \"He is not here, for He has risen, just like He said!\"",
+            "The women ran, full of joy, to tell Jesus' other friends. And on the way, Jesus Himself met them! He was alive!",
+            "Jesus beat death, and He is alive today. Because He lives, everyone who trusts Him will live with Him forever. That is the best news in the whole world!"
+          ],
+          "big_idea": "Jesus is alive, and He is with me today!",
+          "verse": {
+            "ref": "Matthew 28:6",
+            "text": "He is not here, for he has risen, just like he said."
+          },
+          "talk": [
+            "How do you think the women felt when they saw the empty tomb?",
+            "Why is it such good news that Jesus is alive?",
+            "Who could you tell, \"Jesus is alive!\"?"
+          ],
+          "try": "On Easter morning, say \"He is risen!\" to your family at breakfast, and teach them to answer, \"He is risen indeed!\" How many people can you teach it to by the end of the day?",
+          "prayer": "Dear Jesus, You are alive! Thank You that You beat death, and that You are with me every day. Help me to tell others the good news. Amen.",
+          "grown_ups": "The resurrection is the heart of the faith, and the reason the cross is good news rather than a sad ending. Let your child's joy be loud."
+        }
+      ]
+    }
+  ]
+}

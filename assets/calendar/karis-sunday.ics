@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Karis Missions International//Events//EN
+BEGIN:VEVENT
+UID:karis-sunday@karismissions
+DTSTAMP:20260101T000000Z
+DTSTART;TZID=America/Denver:20260104T100000
+DTEND;TZID=America/Denver:20260104T120000
+SUMMARY:Sunday Service: Karis International Assembly
+LOCATION:5905 Flintridge Drive\, Colorado Springs\, CO 80918
+DESCRIPTION:
+RRULE:FREQ=WEEKLY;BYDAY=SU
+END:VEVENT
+END:VCALENDAR

@@ -34,9 +34,13 @@ GitHub rebuilds the site automatically. It goes live in about a minute.
 2. In the repo: **Settings, Pages, Custom domain**, enter it and save.
 3. At your domain registrar, point the DNS at GitHub Pages
    (four A records for the apex, or a CNAME to `richelcode.github.io`).
-4. Change `SITE_URL` at the top of `tools/build.py` to the new address and run
-   `python3 tools/build.py`, so canonical URLs, share cards, `sitemap.xml` and
-   the structured data all follow.
+4. Set `CUSTOM_DOMAIN` at the top of `tools/build.py` (e.g. `"karismissions.org"`)
+   and run `python3 tools/build.py`. It writes the `CNAME` file GitHub needs,
+   and canonical URLs, share cards, `sitemap.xml` and the structured data all
+   follow.
+5. While you are at it, set up a ministry email address on the domain
+   (e.g. info@karismissions.org) and replace tackiausa@gmail.com across the
+   site. It reads as far more trustworthy to donors and partners.
 
 ---
 
@@ -71,13 +75,16 @@ tools/
   fetch_videos.py      pulls the YouTube channel feed and thumbnails
   fetch_articles.py    pulls the Medium feed for the Articles page
   make_icons.py        favicon, app icon, and social share image
+  make_kids_art.py     draws the Little Lights illustrations (SVG)
+  make_storybook_art.py draws the picture-book illustrations (SVG)
+  make_pdfs.py         colouring book + picture book PDFs (needs Chrome, Pillow)
   check_site.py        checks links, images, and form labels
   dedash.py            strips em dashes out of the copy
 assets/
   css/styles.css       design system (edit directly, not generated)
-                       Type: Fraunces for headings, Karla for text.
-                       Deliberately not Inter, and labels are sentence case
-                       rather than uppercase-and-letterspaced.
+                       Type: Young Serif for headings, Figtree for text.
+                       Colours: the church's navy and red, with kente
+                       gold and green as accents (tokens at the top).
   js/site.js           navigation, forms, resource search
   img/                 photography, logos, document previews
   downloads/           the public documents people can download
@@ -169,6 +176,45 @@ followers accrue.
 To change the account, edit `HANDLE` and `AUTHOR_NAME` at the top of
 `tools/fetch_articles.py`.
 
+### Little Lights: devotions, picture book, colouring book
+
+- `src/data/kids-devotions.json` holds the devotion **series** (Five Steps
+  with Jesus, Christmas, Easter). Each devotion becomes its own page and a
+  card on `kids-devotions.html`. Add a series by adding an entry.
+- `src/data/storybook.json` holds *Ama Shines Her Light*, read page by page
+  on `storybook.html`.
+- Pictures are drawn, not photographed, so no child is ever published without
+  consent. Change them in the two `make_*_art.py` scripts.
+
+After changing words or pictures:
+
+```bash
+python3 tools/make_kids_art.py
+python3 tools/make_storybook_art.py
+python3 tools/build.py
+python3 tools/make_pdfs.py      # colouring book + picture book PDFs
+python3 tools/build.py          # picks up the new PDF sizes
+```
+
+Scripture is quoted from the World English Bible (public domain). Stars that
+children collect are stored only in their own browser; nothing is sent.
+
+### Events, Field Notes
+
+- **Events:** edit `src/data/events.json`. `weekly` is the regular rhythm;
+  add one-off events to `upcoming` (an example is in the file). Each event
+  gets an "Add to calendar" file, and past events drop off by themselves.
+- **Field Notes:** add a report to `src/data/field-notes.json` (example in
+  the file). Only publish photos of people with their consent, and never a
+  child without written consent from a parent or guardian.
+
+### Automatic updates
+
+`.github/workflows/refresh-feeds.yml` reads the YouTube and Medium feeds
+every morning, rebuilds, and commits only if something changed, so new
+videos and articles (and expired events) update without anyone running a
+script. It can also be run by hand from the repo's **Actions** tab.
+
 ### Adding a download
 
 1. Put the file in `assets/downloads/tracts/`, `…/outreach/`, or `…/brand/`.
@@ -183,21 +229,21 @@ rather than publishing a broken link.
 
 ## Before going live
 
-### 1. Connect the forms, required
+### 1. Switch things on in one place
 
-Every form (contact, prayer, volunteer application, partnership, giving, notifications)
-is built and validated but not yet wired to a destination.
+Everything the ministry needs to fill in sits at the top of `tools/build.py`.
+Fill a value in, run `python3 tools/build.py`, and push. Anything left empty
+stays off, and the site says honestly what to do instead.
 
-1. Create a free account at <https://formspree.io> and add a form.
-2. Open `assets/js/site.js`.
-3. Set `FORM_ENDPOINT` to the endpoint Formspree gives you:
+| Setting | What it turns on | Until it is set |
+|---|---|---|
+| `FORM_ENDPOINT` | All 10 forms deliver (contact, prayer, volunteer, visit, newsletter, ...). Create a free form at <https://formspree.io> and paste its URL. | Forms offer a pre-filled email |
+| `GIVING_URL`, `GIVING_PROVIDER` | A "Give online" button on the Give page (Tithe.ly, Givebutter, PayPal, ...) | Give page directs people to phone or email |
+| `CUSTOM_DOMAIN` | Writes the `CNAME` file and moves every canonical URL to the new address | Site stays on github.io |
+| `GOATCOUNTER_CODE` | Cookie-free visit counts from <https://www.goatcounter.com>; the Privacy Policy updates itself | No analytics, and the policy says so |
 
-   ```js
-   var FORM_ENDPOINT = 'https://formspree.io/f/yourid';
-   ```
-
-Until this is done nothing is silently lost: each form tells the visitor to email us
-instead and offers a pre-filled mail link.
+**Required:** `FORM_ENDPOINT`. Without it, prayer requests and applications
+only arrive if the visitor actually sends the email.
 
 ### 2. The address is already set
 
@@ -228,22 +274,23 @@ back in.
 
 ### 4. Still to come
 
-- **Online giving.** The Give page explains that giving is being arranged and directs
-  people to phone or email. Connect an approved donation processor when ready.
-- **Devotions, articles, videos, books.** These pages honestly say the content is in
-  preparation and collect email addresses, rather than showing placeholder writing.
-- **Full safeguarding policy.** `safeguarding.html` publishes the ministry's commitments
-  and notes that the complete Board-adopted policy will follow.
-- **Analytics.** None installed. If you add any, update `privacy.html` first, because it
-  currently states that no tracking is used.
+- **Denver and Greeley service times.** Add them to `src/data/events.json`
+  and `src/pages/assemblies.html`.
+- **Twi translations** of Little Lights and the tracts, once a fluent reader
+  can review them.
+- **Field Notes and upcoming events.** The pages are ready and say honestly
+  that nothing is posted yet.
+- **Full safeguarding policy.** `safeguarding.html` publishes the ministry's
+  commitments and notes that the complete Board-adopted policy will follow.
 
 ---
 
 ## What is already done
 
-- 22 pages, all sharing one header, navigation, and footer.
+- 39 pages, all sharing one header, navigation, and footer, including Plan Your
+  Visit, Events, Field Notes, and the Little Lights children's section.
 - Grouped navigation with keyboard-accessible dropdowns and a mobile drawer.
-- Resource Center serving **8 resources / 13 files**: three complete gospel tracts
+- Resource Center serving **10 resources / 15 files**, including the children's picture book and colouring book, plus three complete gospel tracts
   (PDF + editable Word) plus outreach and signage artwork. The logo-download section
   was removed at the ministry's request; the files remain in `assets/downloads/brand/`
   if they are ever wanted back (add them to `src/data/downloads.json` to restore).

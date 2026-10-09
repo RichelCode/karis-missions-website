@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Karis Missions International//Events//EN
+BEGIN:VEVENT
+UID:delaware-bible-study@karismissions
+DTSTAMP:20260101T000000Z
+DTSTART;TZID=America/New_York:20260107T190000
+DTEND;TZID=America/New_York:20260107T200000
+SUMMARY:Bible Studies: Delaware Central Assembly
+LOCATION:Online
+DESCRIPTION:Online. Ask the assembly for the link.
+RRULE:FREQ=WEEKLY;BYDAY=WE
+END:VEVENT
+END:VCALENDAR
