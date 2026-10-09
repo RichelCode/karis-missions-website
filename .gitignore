@@ -17,3 +17,5 @@ Richeal/
 
 # Local layout checks (served from the site root, never published)
 _qa/
+.vercel
+.env*

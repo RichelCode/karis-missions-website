@@ -6,3 +6,5 @@ tools/
 Richeal/
 _qa/
 README.md
+.vercel/
+.env*
