@@ -31,8 +31,12 @@ DATA = SRC / "data"
 # run this script, and push. Leave one empty and that feature stays off,
 # with the site saying honestly what to do instead.
 
-# Your own domain, e.g. "karismissions.org". When set, the build writes the
-# CNAME file GitHub Pages needs and every canonical URL follows it.
+# Where the site is hosted: "vercel" or "github-pages".
+HOSTING = "vercel"
+
+# Your own domain, e.g. "karismissions.org". Every canonical URL, share card
+# and the sitemap follow it. On GitHub Pages the build also writes the CNAME
+# file Pages needs; on Vercel the domain is added in the Vercel dashboard.
 CUSTOM_DOMAIN = ""
 
 # Where form messages are delivered, e.g. "https://formspree.io/f/abcdwxyz".
@@ -949,12 +953,12 @@ def main() -> int:
     print("  sitemap.xml\n  robots.txt")
 
     cname = ROOT / "CNAME"
-    if CUSTOM_DOMAIN:
+    if CUSTOM_DOMAIN and HOSTING == "github-pages":
         cname.write_text(CUSTOM_DOMAIN + "\n", encoding="utf-8")
         print(f"  CNAME  {CUSTOM_DOMAIN}")
     elif cname.exists():
         cname.unlink()
-        print("  removed CNAME (no custom domain set)")
+        print("  removed CNAME (not hosting a custom domain on GitHub Pages)")
 
     # Remove pages that used to exist but are no longer part of the site.
     for stale in ROOT.glob("*.html"):

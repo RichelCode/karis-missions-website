@@ -1,0 +1,8 @@
+# The published site is the generated HTML in the root plus assets/.
+# Sources, tools and notes stay in the repo but are not served.
+src/
+tools/
+.github/
+Richeal/
+_qa/
+README.md
